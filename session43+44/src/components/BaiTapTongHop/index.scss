@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30;
+    padding: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-side {
+    flex: 1;
+}
+
+.image-side img {
+    width: 130%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-side {
+    flex: 1;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-side h2 {
+    margin-bottom: 20px;
+}
+
+.login-side form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-side label {
+    margin-bottom: 5px;
+}
+
+.login-side input {
+    margin-bottom: 0px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-side .forgot-password {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-side .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-side button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-side button:hover {
+    background-color: #0056b3;
+}
+
+.register-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.register-link span {
+    margin-right: 10px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

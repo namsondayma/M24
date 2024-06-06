@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function BMI(weight,height){
+            try {
+                if(typeof(weight) !== "number"||typeof(height) !== "number"&&weight > 0&&height > 0){
+                    throw new Error("Dữ liệu không hợp lệ")
+                }
+                let bmi = weight/(height*height);
+                return bmi;
+            } catch (error) {
+               console.error('Dữ liệu không hợp lệ',error.message); 
+            }
+        }
+        let bmi = BMI(70,1.75) 
+        console.log("BMI",bmi);
+    </script>
+</body>
+</html>

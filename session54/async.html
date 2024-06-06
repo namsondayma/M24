@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        async-await sinh ra ở phiên bản ES7
+        sinh ra giải quyết vấn đề xử lý bất đồng bộ
+        giúp cho việc viết code bằng promise trở nên gọn gàng hơn
+
+        async đc đặt 1 function thì sẽ biến function đấy thành 1 promise
+     -->
+     <script>
+        async function asyncAwait(params){
+           await new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve("1111");
+                }, 1000);
+            })
+            console.log("3333");
+        }
+        console.log(asyncAwait());
+        //
+        function getData(){
+            fetch("")
+        }
+    </script>
+</body>
+</html>

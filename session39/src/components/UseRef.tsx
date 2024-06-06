@@ -34,4 +34,4 @@ export default function UseRef() {
             type='text' placeholder='nhap email'></input>
         </div>
     )
-}
+}   
