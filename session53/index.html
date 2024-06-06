@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    Đồng bộ và bất đồng bộ:
+    1.Đồng bộ : synchronous
+    Ngôn ngữ javascript là 1 ngôn ngữ đơn luồng (single-thread:chỉ 1 luồng duy nhất,luồng
+    codechajy từ trái qua phải và từ trên xuống dưới)
+    2.Bất đồng bộ:asynchronous
+    Những việc cần thời gian xử lý như các hàm : setInterval,readFile,wtiteFile,gửi request 
+    lên sever các thao tác tương tác database 
+    Trong JS sinh ra các cách để xử lý các tác vụ bất đồng bộ
+    1.Dùng call back
+    Call back là gì
+    -->
+    <script>
+        // console.log("công việc 1");
+        // setTimeout(()=>{
+        //     console.log("công việc 2");
+        // },10);
+        // console.log("công việc 3");
+        function task1(a){
+            setTimeout(()=>{
+                console.log("công việc 1 được thực hiện");
+                a();
+            },2000);
+        }
+        function task2(){
+            console.log("được thực hiện sau khi task 1 hòan thành");
+        }
+        // task1(task2);
+        setTimeout(()=>{
+            console.log("công việc 1 thực hiện xong");
+            setTimeout(()=>{
+                console.log("công việc 2 thực hiện sau khi công việc 1 hoàn thành");
+                setTimeout(()=>{
+                    console.log("công việc 3 thực hiện sau khi công việc 2 hoàn thành");
+                },3000)
+            },2000)
+        },1000)
+        //
+        let arr=[1,2,3,4,5];
+        function myMap(a,b){
+            let result=[];
+            for (const item of a){
+                result.push(b(item));
+            }
+            return result;
+        }
+        myMap(arr,(item)=>item*2)
+        //
+    //     let result1 = arr.filter((item)=>item>5);
+    //     console.log("seresult1",result1);
+    //     //
+    //     function filterGreaterThanFive(item) {
+    //        return item > 5;
+    //     }
+    //     let result = arr.filter(filterGreaterThanFive);
+    //     console.log("result1", result1);
+    function myFilter(){
+        let result=[]
+        for (const value of array){
+            if(callback(value)){
+                result.push(value)
+            }
+        }
+        return result
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+const Contact = () => <div>Liên hệ</div>;

@@ -1,0 +1,20 @@
+// .login{
+
+// }
+// .login .login-name{
+//     background-color: green;
+// }
+// .login .login-pass{
+//     background-color: pink;
+// }
+.login{
+    .login-name{
+        background-color: yellow;
+        .login-input{
+            background-color: plum;
+        }
+    }
+    .login-pass{
+        background-color: pink;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function sumWithAsyncAwait(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(arr[i]);
+      }, 100);
+    });
+  }
+  return sum;
+}
+(async () => {
+  const numbers = [1, 2, 3, 4, 5];
+  const result = await sumWithAsyncAwait(numbers);
+  console.log(`Tổng của mảng là: ${result}`);
+})();
+    </script>
+</body>
+</html>
